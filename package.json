@@ -12,7 +12,7 @@
     "build": "npm run compile && npm run generate-types",
     "pretest": "npm run build",
     "test": "truffle test",
-    "migrate:kovan": "truffle migrate --kovan",
+    "migrate:kovan": "truffle migrate --network kovan",
     "prepare": "npm run clean && npm run build && npm run migrate:kovan"
   },
   "repository": {
