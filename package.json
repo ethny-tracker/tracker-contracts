@@ -1,6 +1,6 @@
 {
   "name": "@ethny-tracker/tracker-contracts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "contract JSON for deployed tracker contract",
   "directories": {
     "test": "test"
@@ -12,7 +12,8 @@
     "build": "npm run compile && npm run generate-types",
     "pretest": "npm run build",
     "test": "truffle test",
-    "prepare": "npm run clean && npm run build"
+    "migrate:kovan": "truffle migrate --kovan",
+    "prepare": "npm run clean && npm run build && npm run migrate:kovan"
   },
   "repository": {
     "type": "git",
