@@ -6,7 +6,13 @@
     "test": "test"
   },
   "scripts": {
-    "test": "truffle test"
+    "clean": "rimraf build",
+    "compile": "truffle compile",
+    "generate-types": "typechain --target truffle --outDir 'build/types/truffle-contracts' './build/**/*.json'",
+    "build": "npm run compile && npm run generate-types",
+    "pretest": "npm run build",
+    "test": "truffle test",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -17,5 +23,14 @@
   "bugs": {
     "url": "https://github.com/ethny-tracker/tracker-contracts/issues"
   },
-  "homepage": "https://github.com/ethny-tracker/tracker-contracts#readme"
+  "homepage": "https://github.com/ethny-tracker/tracker-contracts#readme",
+  "devDependencies": {
+    "@types/bignumber.js": "^5.0.0",
+    "truffle": "^5.0.18",
+    "truffle-hdwallet-provider": "^1.0.9",
+    "truffle-typings": "^1.0.6",
+    "ts-node": "^8.1.0",
+    "typechain": "^0.3.14",
+    "typescript": "^3.4.5"
+  }
 }

@@ -1,3 +1,5 @@
 build
 .idea
+.secret
+node_modules/
 
