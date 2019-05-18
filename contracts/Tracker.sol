@@ -1,5 +1,6 @@
 pragma solidity >=0.4.21 <0.6.0;
 
+/// The tracker stores all the metadata hashes for the tracker.
 contract Tracker {
   event FileMetadataAdded(address indexed creator, bytes32 ipfsHash);
 
@@ -9,13 +10,13 @@ contract Tracker {
     uint256 timestamp;
   }
 
-  FileMetadata[] public fileMetadatas;
+  FileMetadata[] public allFileMetadata;
   int public numFileMetadata;
 
   /// Add a file with the given IPFS metadata hash.
   /// Hash is expected to be a sha256 multihash with the 2 byte prefix removed, i.e. a simple sha256 hash
   function addFile(bytes32 ipfsHash) public {
-    fileMetadatas.push(FileMetadata({
+    allFileMetadata.push(FileMetadata({
       ipfsHash : ipfsHash,
       creator : msg.sender,
       timestamp : block.timestamp
