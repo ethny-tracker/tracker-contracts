@@ -8,7 +8,9 @@
   "scripts": {
     "clean": "rimraf build",
     "compile": "truffle compile",
-    "generate-types": "typechain --target truffle --outDir 'build/types/truffle-contracts' './build/**/*.json'",
+    "generate-types:truffle": "typechain --outDir 'build/types/truffle' './build/**/*.json' --target truffle",
+    "generate-types:ethers": "typechain --outDir 'build/types/ethers' './build/**/*.json' --target ethers",
+    "generate-types": "npm run generate-types:truffle && npm run generate-types:ethers",
     "build": "npm run compile && npm run generate-types",
     "pretest": "npm run build",
     "test": "truffle test",

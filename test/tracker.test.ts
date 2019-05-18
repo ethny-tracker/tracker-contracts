@@ -1,4 +1,4 @@
-import { TrackerContract, TrackerInstance } from '../build/types/truffle-contracts';
+import { TrackerContract, TrackerInstance } from '../build/types/truffle';
 
 const Tracker = artifacts.require('Tracker');
 
