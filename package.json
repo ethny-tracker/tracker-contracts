@@ -1,6 +1,6 @@
 {
   "name": "@ethny-tracker/tracker-contracts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "contract JSON for deployed tracker contract",
   "directories": {
     "test": "test"
