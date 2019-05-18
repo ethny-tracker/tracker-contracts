@@ -19,8 +19,9 @@ contract Tracker {
     FileMetadata[] memory metadata = new FileMetadata[](limit);
 
     uint256 setIndex = 0;
-    for (uint256 ix = offset; ix < limit + offset; ix ++) {
-      metadata[setIndex++] = allFileMetadata[ix];
+    for (uint256 ix = offset; ix < limit + offset && ix < numFileMetadata; ix ++) {
+      metadata[setIndex] = allFileMetadata[ix];
+      setIndex++;
     }
 
     return metadata;
