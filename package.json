@@ -1,0 +1,21 @@
+{
+  "name": "@ethny-tracker/tracker-contracts",
+  "version": "1.0.0",
+  "description": "contract JSON for deployed tracker contract",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethny-tracker/tracker-contracts.git"
+  },
+  "author": "Moody Salem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ethny-tracker/tracker-contracts/issues"
+  },
+  "homepage": "https://github.com/ethny-tracker/tracker-contracts#readme"
+}
