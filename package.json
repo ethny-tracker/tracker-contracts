@@ -15,7 +15,8 @@
     "pretest": "npm run build",
     "test": "truffle test",
     "migrate:kovan": "truffle migrate --network kovan",
-    "prepare": "npm run clean && npm run build && npm run migrate:kovan",
+    "migrate:ropsten": "truffle migrate --network ropsten",
+    "prepare": "npm run clean && npm run build && npm run migrate:kovan && npm run migrate:ropsten",
     "create-test-metadata": "ts-node scripts/create-test-metadata.ts"
   },
   "repository": {
